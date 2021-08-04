@@ -6,7 +6,7 @@ import { AddTodo } from "./MyComponents/AddTodo";
 import { About } from "./MyComponents/About";
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
 } from "react-router-dom";
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <HashRouter>
       <Header title="My Todos List" searchBar={false} />
       <Switch>
           <Route exact path="/" render={()=>{
@@ -72,7 +72,7 @@ function App() {
      
  
       <Footer />
-      </Router>
+      </HashRouter>
     </>
   );
 }
